@@ -1,4 +1,4 @@
-const density = '@#W$8976543210?!abc+;:=-,._°^`    ';
+const density = "@#W$8976543210?!abc+;:=-,._°^`    ";
 
 let video;
 let asciiDiv;
@@ -11,7 +11,6 @@ function setup() {
 }
 
 function draw() {
-
     video.loadPixels();
     let asciiImage = "";
     for (let j = 0; j < video.height; j++) {
@@ -26,10 +25,10 @@ function draw() {
             const charIndex = floor(map(avg, 0, 255, len, 0));
 
             const c = density.charAt(charIndex);
-            if (c == ' ') asciiImage += '&nbsp;'
+            if (c == " ") asciiImage += "&nbsp;";
             else asciiImage += c;
         }
-        asciiImage += '<br/>';
+        asciiImage += "<br/>";
     }
     asciiDiv.html(asciiImage);
 }
